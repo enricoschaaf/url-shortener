@@ -1,3 +1,8 @@
 {
-  "routes": [{ "src": "/api", "dest": "/" }]
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    { "src": "/(?<slug>[^/]+)", "dest": "/api?slug=$slug" }
+  ]
 }
